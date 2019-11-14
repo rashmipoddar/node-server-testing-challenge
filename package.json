@@ -4,11 +4,11 @@
   "description": "Node Server Testing Challenge",
   "main": "server.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "cross-env DB_ENV=testing jest --watch",
+    "server": "nodemon index.js"
   },
   "jest": {
-    "testEnvironment": "node",
-    "server": "nodemon index.js"
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
