@@ -7,7 +7,8 @@
     "test": "jest --watch"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,14 @@
   },
   "homepage": "https://github.com/LambdaSchool/node-server-testing#readme",
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.20.2",
+    "sqlite3": "^4.1.0"
   }
 }
