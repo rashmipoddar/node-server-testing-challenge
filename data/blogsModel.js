@@ -8,15 +8,20 @@ const add = (blog) => {
 };
 
 const get = () => {
-
+  return db('blogs');
 };
 
 const getById = (id) => {
+  return db('blogs').where({id}).first();
+};
 
+const remove = (id) => {
+  return db('blogs').where({id}).del();
 };
 
 module.exports = {
   add,
   get,
-  getById
+  getById,
+  remove
 };
